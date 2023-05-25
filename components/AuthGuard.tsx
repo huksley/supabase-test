@@ -33,9 +33,9 @@ export const AuthGuard = ({ children }: { children: React.ReactNode }) => {
       console.info("Session error", error);
     }
     return isLoading ? (
-      <Shell message="Loading..." />
+      <Shell key="AuthGuard" message="Loading..." />
     ) : (
-      <Shell>
+      <Shell key="Auth">
         <Auth
           supabaseClient={supabase}
           magicLink

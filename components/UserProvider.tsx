@@ -40,7 +40,7 @@ function UserProvider({ children }: { children: React.ReactNode }) {
   const signOut = useCallback(() => signOutUser(supabaseClient), []);
 
   if (!user) {
-    return <Shell message="Loading" />;
+    return <Shell key="UserProvider" message="Loading" />;
   }
 
   const userData = {
